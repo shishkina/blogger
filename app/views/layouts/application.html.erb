@@ -7,6 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+<ul>
+  <li><a href="/"> Home </a></li>
+  <li><a href="/articles"> Articles </a></li>
+  <li><a href="/tags"> Tags </a></li>
+  <% if logged_in?%>
+  <li><a href="/authors"> Authors </a></li>
+  <%end%>
+</ul>
+</header>
   <p class="flash">
     <%= flash.notice %>
   </p>
