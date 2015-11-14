@@ -27,9 +27,10 @@
       <h6>
         <% if logged_in? %>
           <%= "Logged in as #{current_user.email}" %>
-          <%= link_to "(logout)", logout_path%>
+          <%= button_to "Logout", logout_path, :metod => delete%>
         <% else %>
           <%= link_to "(login)", login_path%>
+          <%= link_to "Create an account? Sign UP!", new_user_path%>
         <% end %>
       </h6>
     </div>
